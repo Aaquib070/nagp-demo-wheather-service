@@ -18,4 +18,5 @@ jobs:
       run: |
         docker build . --file Dockerfile --tag demo-service:1
         docker tag demo-service:1:tag 1250590/demo-service:1
+        docker login --username 1250590 --password dckr_pat_n4On6E5JujkjS8fjI3TwTwuQ68s
         docker push 1290950/demo-service:1
