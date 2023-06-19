@@ -1,0 +1,71 @@
+.App {
+  text-align: center;
+}
+
+td {
+  min-width: 100px;
+}
+
+.tableDiv {
+  background-color: #113437;
+  opacity: 0.8;
+  border-radius: 10px;
+  
+}
+
+.button {
+  color: beige;
+  font-size: 24px;
+  font-weight: 600;
+  background-color: cornflowerblue;
+  width: 400px;
+  height: 50px;
+}
+
+table {
+  margin: 30px;
+}
+
+.desc {
+  text-align: left;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+
+
+.App-header {
+
+  background-color: #282c34;
+  background-image: url('https://images.pexels.com/photos/209831/pexels-photo-209831.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
