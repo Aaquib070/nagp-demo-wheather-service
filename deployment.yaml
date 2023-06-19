@@ -1,0 +1,57 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: chat-app
+  labels:
+    app: chat-app
+spec:
+  strategy:
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
+    type: RollingUpdate
+  replicas: 3
+  selector:
+    matchLabels:
+      app: chat-app
+  template:
+    metadata:
+      labels:
+        app: chat-app
+    spec:
+      containers:
+      - name: chat-app-container
+        image: 431104670392.dkr.ecr.ap-south-1.amazonaws.com/IMAGE_REPO_NAME:latest
+        imagePullPolicy: Always
+        command: ["/bin/bash"]
+        args: ["-c", "npm run start"]
+        resources:
+          limits:
+            memory: 512Mi
+            cpu: 200m
+          requests: 
+            memory: 256Mi
+            cpu: 100m
+        env:
+          - name: SUPERSEND_WORKSPACE_KEY
+            valueFrom:
+              secretKeyRef:
+                name: supersend-secrets
+                key: workspace-key
+          - name: SUPERSEND_WORKSPACE_SECRET
+            valueFrom:
+              secretKeyRef:
+                name: supersend-secrets
+                key: workspace-secret
+          - name: SUPERSEND_APP_INBOX_SECRET
+            valueFrom:
+              secretKeyRef:
+                name: supersend-secrets
+                key: app-inbox-secret
+          - name: DATABASE_URL
+            valueFrom:
+              secretKeyRef:
+                name: db-secret-chat
+                key: database-url
+        ports:
+        - containerPort: 8080
