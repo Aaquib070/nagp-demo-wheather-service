@@ -17,7 +17,7 @@ jobs:
     - name: Build the Docker image
       run: |
         docker build . --file Dockerfile --tag demo-service:1
-        docker tag demo-service:1 1250590/demo-service:1
-        #docker login --username 1250590 --password dckr_pat_n4On6E5JujkjS8fjI3TwTwuQ68s
-        docker login --username aaquibfaridi003@gmail.com --password Aaquib@8081
+        docker tag demo-service:1 1290950/demo-service:1
+        docker login --username 1290950 --password dckr_pat_n4On6E5JujkjS8fjI3TwTwuQ68s
+        #docker login --username 1290950 --password-stdin Aaquib@8081
         docker push 1290950/demo-service:1
