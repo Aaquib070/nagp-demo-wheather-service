@@ -1,4 +1,4 @@
-FROM nodejs
+FROM node
 ENV app_dir /application
 WORKDIR ${app_dir}
 COPY ./application .
