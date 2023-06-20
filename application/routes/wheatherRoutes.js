@@ -37,6 +37,7 @@ router.get("/", async (req, res, next) => {
      res.send(whathers)
     
   } catch (err) {
+    console.log(err);
     res.status(500).send("Something went Wrong");
   }
 });
