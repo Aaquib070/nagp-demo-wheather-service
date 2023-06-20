@@ -12,12 +12,12 @@ https://github.com/Aaquib070/nagp-demo-wheather-service
 
 ### File structure
 
-- '/application': contains service layer code
+- 'application/': contains service layer code
 - 'Dockerfile': docker file service layer
 - 'Deploymnet.yaml': Kubernetes Deployment Yaml file for service layer
 - 'Service.yaml': Kubernetes Service Yaml file for service layer
 - 'Devops/'
-  - 'app-config.yaml': Configmap for database configuration like database url and database name
+  - '*app-config.yaml*': Configmap for database configuration like database url and database name
   - 'app-secret.yaml': Kubernetes Secrets for sensetive keys like database password
   - 'database-pv.yaml': PersistentVolume for database
   - 'database-pvc.yaml': PersistentVolumeClaim for database
