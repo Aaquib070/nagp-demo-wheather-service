@@ -25,8 +25,9 @@ Demo video link
 ## Installation
 
 Run following command :
-npm install
-npm run start
+
+- npm install
+- npm run start
 
 
 ### Frontend
@@ -36,9 +37,9 @@ npm run start
 ### Backend
 
 - Get wheather from database 
-   curl --location --request GET 'http://a42878683407a4a4ab2696a82f7e7b83-1752270017.ap-south-1.elb.amazonaws.com/api/wheather'
+  - curl --location --request GET 'http://a42878683407a4a4ab2696a82f7e7b83-1752270017.ap-south-1.elb.amazonaws.com/api/wheather'
 - Fetch wheather from vendor and add to database
-   curl --location --request GET 'http://a42878683407a4a4ab2696a82f7e7b83-1752270017.ap-south-1.elb.amazonaws.com/api/wheather/check-wheather'
+  - curl --location --request GET 'http://a42878683407a4a4ab2696a82f7e7b83-1752270017.ap-south-1.elb.amazonaws.com/api/wheather/check-wheather'
 
 ## Contact
 
