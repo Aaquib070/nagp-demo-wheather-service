@@ -1,19 +1,12 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: chat-app-service
-  annotations:
-    service.beta.kubernetes.io/aws-load-balancer-ssl-cert: arn:aws:acm:ap-south-1:687065838204:certificate/4912ce61-8b47-4f08-b8a6-77d98eeeb582
-    #service.beta.kubernetes.io/aws-load-balancer-ssl-cert: arn:aws:acm:ap-south-1:431104670392:certificate/3cd7040c-219e-42f0-8ab8-03ced5f5c1df
-    #service.beta.kubernetes.io/aws-load-balancer-backend-protocol: http
+  name: demo-service
 spec:
   type: LoadBalancer
   selector:
-    app: chat-app
+    app: demo-service
   ports:
-  - name: http 
-    port: 80
-    targetPort: 8080
-  - name: https
-    port: 443
-    targetPort: 8080
+    - name: http 
+      port: 80
+      targetPort: 8080

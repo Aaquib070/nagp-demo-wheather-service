@@ -3,6 +3,8 @@ kind: Deployment
 metadata:
   name: database
 spec:
+  strategy:
+    type: Recreate
   replicas: 1
   selector:
     matchLabels:
@@ -17,15 +19,21 @@ spec:
           image: mongo:latest
           ports:
             - containerPort: 27017
+          env:
+            - name: MONGO_INITDB_ROOT_USERNAME
+              valueFrom:
+                secretKeyRef:
+                  name: app-secret
+                  key: username
+            - name: MONGO_INITDB_ROOT_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: app-secret
+                  key: password
           volumeMounts:
             - name: mongodb-data
               mountPath: /data/db
-          envFrom:
-            - secretRef:
-                name: app-secret
-            - configMapRef:
-                name: db-config
       volumes:
         - name: mongodb-data
           persistentVolumeClaim:
-            claimName: database-pvc
+            claimName: database-mongodb-pvc
