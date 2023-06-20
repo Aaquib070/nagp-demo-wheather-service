@@ -14,8 +14,9 @@ https://github.com/Aaquib070/nagp-demo-wheather-service
 
 https://hub.docker.com/r/1290950/demo-service
 
-### Backend Service
+## Service Layer
 
+### API
 - Get wheather from database 
   - curl --location --request GET 'http://a42878683407a4a4ab2696a82f7e7b83-1752270017.ap-south-1.elb.amazonaws.com/api/wheather'
 - Fetch wheather from vendor and add to database
