@@ -44,7 +44,7 @@ https://hub.docker.com/r/1290950/demo-service
 
 Demo video link
 
-[Demo Video](https://drive.google.com/file/d/12y_InktdJh7cGVtlCSFpvyo8oeAr4kSP/view?usp=share_link)
+[Demo Video](https://drive.google.com/file/d/1urpjAH_IEPWmLlizsLaXx6pZkAkLw5if/view?usp=sharing)
 
 ## Technologies Used
 
